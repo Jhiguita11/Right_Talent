@@ -12,7 +12,7 @@ export default function Leadership() {
       <div className="container split">
         <div className="split__media reveal reveal--left">
           <div className="media-frame">
-            <img src={images.handshake} alt="Business partnership handshake" loading="lazy" />
+            <img src={images.leadership} alt="Business partnership handshake" loading="lazy" />
             <div className="stat-badge">
               <span className="stat-badge__num"><CountUp value={t(c.statValue)} /></span>
               <span className="stat-badge__label">{t(c.statLabel)}</span>

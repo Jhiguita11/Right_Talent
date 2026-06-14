@@ -18,7 +18,7 @@ export default function Purpose() {
         </div>
         <div className="split__media reveal reveal--right">
           <div className="media-frame">
-            <img src={images.team} alt="Professional hospitality team" loading="lazy" />
+            <img src={images.purpose} alt="Right Talent hospitality team" loading="lazy" />
           </div>
         </div>
       </div>

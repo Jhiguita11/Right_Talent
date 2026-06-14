@@ -203,9 +203,12 @@ export const content = {
       submit: { en: 'Send Request', es: 'Enviar Solicitud' },
     },
     emailLabel: { en: 'Email us', es: 'Escríbenos' },
-    webLabel: { en: 'Visit', es: 'Sitio web' },
+    phoneLabel: { en: 'Call us', es: 'Llámanos' },
+    linkedinLabel: { en: 'Follow us', es: 'Síguenos' },
     email: 'hello@rtproservices.co',
-    web: 'www.rtproservices.co',
+    phone: '+1 (570) 982 0876',
+    phoneHref: 'tel:+15709820876',
+    linkedin: 'https://www.linkedin.com/company/rt-pro-services',
   },
 
   footer: {

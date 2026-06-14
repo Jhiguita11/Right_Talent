@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useLang } from '../context/LanguageContext.jsx'
 import { content } from '../data/content.js'
-import { Mail, Globe } from './icons.jsx'
+import { Mail, Phone, LinkedIn } from './icons.jsx'
 
 export default function Contact() {
   const { t } = useLang()
@@ -41,11 +41,18 @@ export default function Contact() {
                 {c.email}
               </span>
             </a>
-            <a className="contact__method" href={`https://${c.web}`} target="_blank" rel="noreferrer">
-              <span className="ico"><Globe /></span>
+            <a className="contact__method" href={c.phoneHref}>
+              <span className="ico"><Phone /></span>
               <span>
-                <small>{t(c.webLabel)}</small>
-                {c.web}
+                <small>{t(c.phoneLabel)}</small>
+                {c.phone}
+              </span>
+            </a>
+            <a className="contact__method" href={c.linkedin} target="_blank" rel="noreferrer">
+              <span className="ico"><LinkedIn /></span>
+              <span>
+                <small>{t(c.linkedinLabel)}</small>
+                LinkedIn
               </span>
             </a>
           </div>

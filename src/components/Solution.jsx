@@ -10,7 +10,7 @@ export default function Solution() {
       <div className="container split split--reverse">
         <div className="split__media reveal reveal--left">
           <div className="media-frame">
-            <img src={images.lobby} alt="Luxury hotel lounge" loading="lazy" />
+            <img src={images.solution} alt="Luxury resort poolside" loading="lazy" />
           </div>
         </div>
         <div className="reveal reveal--right">
