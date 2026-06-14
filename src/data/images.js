@@ -6,7 +6,7 @@ export const images = {
   heroBg: u('1582719478250-c89cae4dc85b', 1920),
   // TODO: client to provide final hotel/resort photos for Leadership & Purpose.
   // Placeholders below are hospitality-themed in the meantime.
-  handshake: u('1551882547-ff40c63fe5fa', 1000), // luxury resort at dusk (Leadership)
+  handshake: u('1521791136064-7986c2920216', 1000), // business handshake (Leadership)
   team: u('1571896349842-33c89424de2d', 1000), // resort pool
   reception: u('1564501049412-61c2a3083791'),
   lobby: u('1566073771259-6a8506099945', 1100),
