@@ -7,6 +7,7 @@ import Leadership from './components/Leadership.jsx'
 import Purpose from './components/Purpose.jsx'
 import Challenge from './components/Challenge.jsx'
 import Solution from './components/Solution.jsx'
+import BrandBanner from './components/BrandBanner.jsx'
 import Services from './components/Services.jsx'
 import Value from './components/Value.jsx'
 import Philosophy from './components/Philosophy.jsx'
@@ -28,6 +29,7 @@ export default function App() {
         <Purpose />
         <Challenge />
         <Solution />
+        <BrandBanner />
         <Services />
         <Value />
         <Philosophy />

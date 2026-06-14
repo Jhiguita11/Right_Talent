@@ -346,6 +346,19 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .form__success { color: var(--gold-light); text-align: center; padding: 8px; font-size: 0.95rem; }
 
 /* ============================================================
+   Brand banner band
+   ============================================================ */
+.brand-banner__img {
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--line-on-dark);
+}
+
+/* ============================================================
    Footer
    ============================================================ */
 .footer { background: var(--navy-900); color: rgba(246,243,236,0.7); padding: 50px 0 36px; border-top: 1px solid var(--line-on-dark); }
