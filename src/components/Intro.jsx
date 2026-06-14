@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import logo from '../assets/logo-rt.png'
 
 // Full-screen brand intro that plays once when the page loads, then lifts
 // like a curtain to reveal the hero. Skipped for reduced-motion users.
@@ -28,10 +29,8 @@ export default function Intro() {
   return (
     <div className={`intro ${exiting ? 'intro--exit' : ''}`} aria-hidden="true">
       <div className="intro__inner">
-        <span className="intro__mark">RT</span>
-        <span className="intro__name">RIGHT TALENT</span>
+        <img src={logo} alt="Right Talent Pro Services" className="intro__logo" />
         <span className="intro__line" />
-        <span className="intro__tag">PRO SERVICES</span>
       </div>
     </div>
   )

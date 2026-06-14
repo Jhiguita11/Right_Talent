@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useLang } from '../context/LanguageContext.jsx'
 import { content } from '../data/content.js'
+import logo from '../assets/logo-rt.png'
 
 export default function Navbar() {
   const { lang, setLang, t } = useLang()
@@ -48,12 +49,8 @@ export default function Navbar() {
   return (
     <nav className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
       <div className="container nav__inner">
-        <a href="#top" className="nav__brand" onClick={close}>
-          <span className="nav__mark">RT</span>
-          <span className="nav__name">
-            Right Talent
-            <small>PRO SERVICES</small>
-          </span>
+        <a href="#top" className="nav__brand" onClick={close} aria-label="Right Talent Pro Services">
+          <img src={logo} alt="Right Talent Pro Services" className="nav__logo" />
         </a>
 
         <div className={`nav__links ${open ? 'is-open' : ''}`}>

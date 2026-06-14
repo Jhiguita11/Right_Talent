@@ -1,5 +1,6 @@
 import { useLang } from '../context/LanguageContext.jsx'
 import { content } from '../data/content.js'
+import logo from '../assets/logo-rt.png'
 
 export default function Footer() {
   const { t } = useLang()
@@ -8,7 +9,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer__inner">
         <div className="footer__brand">
-          <span className="nav__mark">RT</span>
+          <img src={logo} alt="Right Talent Pro Services" className="footer__logo" />
           <span className="footer__tagline">{t(c.tagline)}</span>
         </div>
         <p className="footer__copy">
