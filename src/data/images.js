@@ -4,8 +4,10 @@ const u = (id, w = 900) =>
 
 export const images = {
   heroBg: u('1582719478250-c89cae4dc85b', 1920),
-  handshake: u('1521791136064-7986c2920216'),
-  team: u('1556761175-5973dc0f32e7'),
+  // TODO: client to provide final hotel/resort photos for Leadership & Purpose.
+  // Placeholders below are hospitality-themed in the meantime.
+  handshake: u('1564501049412-61c2a3083791', 1000), // resort / hotel exterior
+  team: u('1571896349842-33c89424de2d', 1000), // resort pool
   reception: u('1564501049412-61c2a3083791'),
   lobby: u('1566073771259-6a8506099945', 1100),
   housekeeping: u('1631049307264-da0ec9d70304'),

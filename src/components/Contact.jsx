@@ -14,7 +14,13 @@ export default function Contact() {
     const data = new FormData(e.currentTarget)
     const subject = encodeURIComponent(`Staffing request — ${data.get('company') || data.get('name')}`)
     const body = encodeURIComponent(
-      `Name: ${data.get('name')}\nCompany: ${data.get('company')}\nEmail: ${data.get('email')}\n\n${data.get('message')}`,
+      `Name: ${data.get('name')}\n` +
+        `Job title: ${data.get('role')}\n` +
+        `Company: ${data.get('company')}\n` +
+        `Staff needed: ${data.get('teamSize')}\n` +
+        `Phone: ${data.get('phone')}\n` +
+        `Email: ${data.get('email')}\n\n` +
+        `${data.get('message')}`,
     )
     window.location.href = `mailto:${c.email}?subject=${subject}&body=${body}`
     setSent(true)
@@ -52,13 +58,29 @@ export default function Contact() {
               <input id="name" name="name" required />
             </div>
             <div className="field">
+              <label htmlFor="role">{t(c.form.role)}</label>
+              <input id="role" name="role" />
+            </div>
+          </div>
+          <div className="row">
+            <div className="field">
               <label htmlFor="company">{t(c.form.company)}</label>
               <input id="company" name="company" />
             </div>
+            <div className="field">
+              <label htmlFor="teamSize">{t(c.form.teamSize)}</label>
+              <input id="teamSize" name="teamSize" type="number" min="1" inputMode="numeric" />
+            </div>
           </div>
-          <div className="field">
-            <label htmlFor="email">{t(c.form.email)}</label>
-            <input id="email" name="email" type="email" required />
+          <div className="row">
+            <div className="field">
+              <label htmlFor="phone">{t(c.form.phone)}</label>
+              <input id="phone" name="phone" type="tel" inputMode="tel" />
+            </div>
+            <div className="field">
+              <label htmlFor="email">{t(c.form.email)}</label>
+              <input id="email" name="email" type="email" required />
+            </div>
           </div>
           <div className="field">
             <label htmlFor="message">{t(c.form.message)}</label>

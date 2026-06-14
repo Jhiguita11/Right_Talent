@@ -107,6 +107,10 @@ export const content = {
           items: ['Housekeeping', 'Room Attendant', 'Laundry Services', 'Janitorial'],
         },
         {
+          name: 'Kitchen',
+          items: ['Chef', 'Assistant Chef', 'Kitchen Support', 'Dishwasher'],
+        },
+        {
           name: 'Facilities',
           items: ['Maintenance Support', 'Technicians', 'Landscaping', 'Remodeling Support'],
         },
@@ -120,13 +124,17 @@ export const content = {
         },
         {
           name: 'Front of House',
-          items: ['Front Desk', 'Doorman', 'Kitchen Support', 'Cashiers', 'Admin Support'],
+          items: ['Front Desk', 'Doorman', 'Cashiers', 'Admin Support'],
         },
       ],
       es: [
         {
           name: 'Habitaciones y Limpieza',
           items: ['Housekeeping', 'Camaristas', 'Servicio de Lavandería', 'Limpieza General'],
+        },
+        {
+          name: 'Cocina',
+          items: ['Chef', 'Asistente de Chef', 'Apoyo de Cocina', 'Lavaplatos (Dishwasher)'],
         },
         {
           name: 'Mantenimiento',
@@ -138,11 +146,11 @@ export const content = {
         },
         {
           name: 'Recreación',
-          items: ['Salvavidas de Piscina', 'Personal de Parque Acuático', 'Salvavidas', 'Personal de Playa', 'Personal de Arcade', 'Animación Infantil'],
+          items: ['Personal de Piscina', 'Personal de Parque Acuático', 'Salvavidas', 'Personal de Playa', 'Personal de Arcade', 'Animación Infantil'],
         },
         {
           name: 'Atención al Cliente',
-          items: ['Recepción', 'Portero', 'Apoyo de Cocina', 'Cajeros', 'Soporte Administrativo'],
+          items: ['Recepción', 'Portero', 'Cajeros', 'Soporte Administrativo'],
         },
       ],
     },
@@ -186,14 +194,17 @@ export const content = {
     },
     form: {
       name: { en: 'Full name', es: 'Nombre completo' },
+      role: { en: 'Job title', es: 'Cargo' },
       company: { en: 'Company', es: 'Empresa' },
+      teamSize: { en: 'Number of staff needed', es: 'Número de colaboradores' },
+      phone: { en: 'Phone', es: 'Teléfono' },
       email: { en: 'Email', es: 'Correo electrónico' },
       message: { en: 'How can we help?', es: '¿Cómo podemos ayudarte?' },
       submit: { en: 'Send Request', es: 'Enviar Solicitud' },
     },
     emailLabel: { en: 'Email us', es: 'Escríbenos' },
     webLabel: { en: 'Visit', es: 'Sitio web' },
-    email: 'hello@rtproservices.com',
+    email: 'hello@rtproservices.co',
     web: 'www.rtproservices.co',
   },
 

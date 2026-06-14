@@ -4,10 +4,9 @@ const LanguageContext = createContext(null)
 
 export function LanguageProvider({ children }) {
   const [lang, setLang] = useState(() => {
+    // Always default to English; only honor a previous explicit choice.
     const saved = typeof localStorage !== 'undefined' && localStorage.getItem('rt-lang')
-    if (saved) return saved
-    const browser = typeof navigator !== 'undefined' && navigator.language
-    return browser && browser.toLowerCase().startsWith('es') ? 'es' : 'en'
+    return saved === 'es' || saved === 'en' ? saved : 'en'
   })
 
   useEffect(() => {

@@ -159,6 +159,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .lang-toggle button.is-active { background: var(--gold); color: var(--navy-900); }
 
+.nav__mobile { display: none; align-items: center; gap: 14px; }
+.lang-toggle--mobile { display: none; }
 .nav__toggle { display: none; flex-direction: column; gap: 5px; padding: 6px; }
 .nav__toggle span { width: 24px; height: 2px; background: var(--cream); transition: 0.3s; }
 
@@ -464,6 +466,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     padding: 28px; border-top: 1px solid var(--line-on-dark);
   }
   .nav__toggle { display: flex; }
+  .nav__mobile { display: flex; }
+  .lang-toggle--desktop { display: none; }
+  .lang-toggle--mobile { display: flex; }
   .cards, .services__grid, .stats-row, .form .row { grid-template-columns: 1fr; }
   .media-frame::before { display: none; }
   .form { padding: 26px 22px; }

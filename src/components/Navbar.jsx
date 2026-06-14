@@ -26,6 +26,25 @@ export default function Navbar() {
 
   const close = () => setOpen(false)
 
+  const LangToggle = ({ className = '' }) => (
+    <div className={`lang-toggle ${className}`} role="group" aria-label="Language">
+      <button
+        className={lang === 'en' ? 'is-active' : ''}
+        onClick={() => setLang('en')}
+        aria-pressed={lang === 'en'}
+      >
+        EN
+      </button>
+      <button
+        className={lang === 'es' ? 'is-active' : ''}
+        onClick={() => setLang('es')}
+        aria-pressed={lang === 'es'}
+      >
+        ES
+      </button>
+    </div>
+  )
+
   return (
     <nav className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
       <div className="container nav__inner">
@@ -43,35 +62,23 @@ export default function Navbar() {
               {t(label)}
             </a>
           ))}
-          <div className="lang-toggle" role="group" aria-label="Language">
-            <button
-              className={lang === 'en' ? 'is-active' : ''}
-              onClick={() => setLang('en')}
-              aria-pressed={lang === 'en'}
-            >
-              EN
-            </button>
-            <button
-              className={lang === 'es' ? 'is-active' : ''}
-              onClick={() => setLang('es')}
-              aria-pressed={lang === 'es'}
-            >
-              ES
-            </button>
-          </div>
+          <LangToggle className="lang-toggle--desktop" />
           <a href="#contact" className="btn btn--gold" onClick={close} style={{ padding: '12px 24px' }}>
             {t(c.requestStaff)}
           </a>
         </div>
 
-        <button
-          className="nav__toggle"
-          aria-label="Menu"
-          aria-expanded={open}
-          onClick={() => setOpen((o) => !o)}
-        >
-          <span /><span /><span />
-        </button>
+        <div className="nav__mobile">
+          <LangToggle className="lang-toggle--mobile" />
+          <button
+            className="nav__toggle"
+            aria-label="Menu"
+            aria-expanded={open}
+            onClick={() => setOpen((o) => !o)}
+          >
+            <span /><span /><span />
+          </button>
+        </div>
       </div>
     </nav>
   )
