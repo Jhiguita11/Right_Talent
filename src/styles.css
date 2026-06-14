@@ -118,7 +118,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   inset: 0 0 auto 0;
   z-index: 100;
   transition: background 0.4s var(--ease), box-shadow 0.4s var(--ease), padding 0.4s var(--ease);
-  padding: 22px 0;
+  padding: 14px 0;
 }
 .nav--scrolled {
   background: rgba(8, 32, 42, 0.92);
@@ -128,8 +128,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .nav__inner { display: flex; align-items: center; justify-content: space-between; }
 .nav__brand { display: flex; align-items: center; gap: 12px; color: var(--cream); }
-.nav__logo { height: 80px; width: auto; display: block; transition: height 0.4s var(--ease); }
-.nav--scrolled .nav__logo { height: 58px; }
+.nav__logo { height: 104px; width: auto; display: block; transition: height 0.4s var(--ease); }
+.nav--scrolled .nav__logo { height: 74px; }
 .nav__mark {
   width: 42px; height: 42px; border-radius: 6px;
   display: grid; place-items: center;
@@ -346,17 +346,22 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .form__success { color: var(--gold-light); text-align: center; padding: 8px; font-size: 0.95rem; }
 
 /* ============================================================
-   Brand banner band
+   Brand banner band — full-bleed immersive
    ============================================================ */
+.brand-banner {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  background: var(--navy-900);
+}
 .brand-banner__img {
   width: 100%;
-  max-width: 1060px;
-  margin: 0 auto;
+  height: auto;
   display: block;
-  border-radius: 10px;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--line-on-dark);
 }
+/* Slight expand-to-fill on reveal (overrides the generic --scale start). */
+.brand-banner__img.reveal--scale { transform: scale(1.06); transform-origin: center; }
+.brand-banner__img.reveal--scale.is-visible { transform: scale(1); }
 
 /* ============================================================
    Footer
@@ -486,8 +491,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .stat-badge { padding: 14px 18px; gap: 12px; left: 0; right: 0; bottom: -22px; }
   .stat-badge__num { font-size: 2rem; }
   .stat-badge__label { font-size: 0.74rem; max-width: none; }
-  .nav__logo { height: 50px; }
-  .nav--scrolled .nav__logo { height: 42px; }
+  .nav__logo { height: 66px; }
+  .nav--scrolled .nav__logo { height: 54px; }
   .footer__logo { height: 60px; }
 }
 
