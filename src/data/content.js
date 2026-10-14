@@ -185,6 +185,25 @@ export const content = {
     attribution: { en: 'Our Philosophy at Right Talent', es: 'Nuestra Filosofía en Right Talent' },
   },
 
+  where: {
+    eyebrow: { en: 'Our footprint', es: 'Nuestra presencia' },
+    title: { en: 'Where We Are', es: 'Dónde Estamos' },
+    // `key` debe coincidir con el nombre del estado en src/data/usMap.js.
+    // `side` coloca la etiqueta a la izquierda o derecha del punto.
+    states: [
+      { key: 'Pennsylvania', side: 'right', label: { en: 'Pennsylvania', es: 'Pensilvania' } },
+      { key: 'Ohio', side: 'right', label: { en: 'Ohio', es: 'Ohio' } },
+      { key: 'North Carolina', side: 'right', label: { en: 'North Carolina', es: 'Carolina del Norte' } },
+      { key: 'Texas', side: 'right', label: { en: 'Texas', es: 'Texas' } },
+      { key: 'Wisconsin', side: 'right', label: { en: 'Wisconsin', es: 'Wisconsin' } },
+      { key: 'Indiana', side: 'left', label: { en: 'Indiana', es: 'Indiana' } },
+      { key: 'Alabama', side: 'right', label: { en: 'Alabama', es: 'Alabama' } },
+      { key: 'Florida', side: 'right', label: { en: 'Florida', es: 'Florida' } },
+      { key: 'Hawaii', side: 'right', label: { en: 'Hawaii', es: 'Hawái' } },
+    ],
+  },
+
+
   contact: {
     eyebrow: { en: "Let's Talk", es: 'Hablemos' },
     title: { en: 'Ready to Raise Your Standards?', es: '¿Listo para Elevar tus Estándares?' },
@@ -209,6 +228,10 @@ export const content = {
     phone: '+1 (570) 982 0876',
     phoneHref: 'tel:+15709820876',
     linkedin: 'https://www.linkedin.com/company/rt-pro-services',
+    instagramLabel: { en: 'Follow us', es: 'Síguenos' },
+    instagram: 'https://www.instagram.com/rtproservices/',
+    instagramLabel: { en: 'Follow us', es: 'Síguenos' },
+    instagram: 'https://www.instagram.com/rtproservices/',
   },
 
   footer: {

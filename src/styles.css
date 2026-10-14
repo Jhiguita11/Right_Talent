@@ -457,6 +457,91 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ============================================================
    Responsive
    ============================================================ */
+/* ---------- Where we are (mapa de presencia) ---------- */
+.where {
+  background: var(--navy-800);
+  color: var(--cream);
+  border-top: 1px solid var(--line-on-dark);
+  border-bottom: 1px solid var(--line-on-dark);
+  overflow: hidden;
+}
+.where__grid { display: grid; grid-template-columns: minmax(230px, 0.75fr) 1.85fr; gap: 54px; align-items: center; }
+.where__badge {
+  width: 54px; height: 54px; display: grid; place-items: center; margin-bottom: 24px;
+  border-radius: 50%; border: 1px solid var(--gold); color: var(--gold);
+}
+.where__badge svg { width: 24px; height: 24px; }
+.where__intro .eyebrow { display: block; margin-bottom: 14px; }
+
+.where__canvas { position: relative; width: 100%; }
+.where__dots { display: block; width: 100%; height: 100%; overflow: visible; }
+
+.where__dot { fill: var(--gold); opacity: 0.26; transition: opacity 0.4s var(--ease); }
+.where__dot--on { opacity: 1; }
+
+/* Silueta de los estados sin presencia: decorativa, no recibe el mouse. */
+.where__base { pointer-events: none; }
+
+/* Zona sensible de cada estado con presencia. */
+.where__state { cursor: pointer; }
+.where__hit { fill: transparent; }
+.where__state .where__dot--on {
+  transform-box: fill-box; transform-origin: center;
+  transition: transform 0.4s var(--ease), opacity 0.4s var(--ease);
+}
+.where__state.is-hot .where__dot--on { transform: scale(1.5); }
+
+/* Con el mouse sobre un estado, el resto del mapa se apaga para que resalte. */
+.where__canvas.is-hovering .where__base .where__dot { opacity: 0.13; }
+.where__canvas.is-hovering .where__state:not(.is-hot) .where__dot--on { opacity: 0.4; }
+
+/* Las chinchetas son puntos sin tamaño: la etiqueta se cuelga a un costado. */
+.where__pin { position: absolute; width: 0; height: 0; }
+.where__label {
+  position: absolute; left: 13px; top: -11px; white-space: nowrap;
+  font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; line-height: 1;
+  color: var(--cream); background: rgba(8, 32, 42, 0.92);
+  border: 1px solid var(--line-on-dark); border-radius: 2px; padding: 5px 8px; cursor: pointer;
+  transition: background 0.4s var(--ease), color 0.4s var(--ease),
+              border-color 0.4s var(--ease), transform 0.4s var(--ease);
+}
+.where__pin[data-side='left'] .where__label { left: auto; right: 13px; }
+.where__pin.is-hot .where__label {
+  background: var(--gold); border-color: var(--gold); color: var(--navy-900);
+  transform: translateY(-2px);
+}
+.where__label:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 2px; }
+.where__canvas.is-hovering .where__pin:not(.is-hot) .where__label { opacity: 0.45; }
+
+.where__ping {
+  position: absolute; left: 50%; top: 50%; width: 10px; height: 10px; margin: -5px 0 0 -5px;
+  border-radius: 50%; border: 1px solid var(--gold); opacity: 0; pointer-events: none;
+}
+.where__pin.is-hot .where__ping { animation: where-ping 1.8s var(--ease) infinite; }
+@keyframes where-ping {
+  0% { transform: scale(0.5); opacity: 0.85; }
+  70%, 100% { transform: scale(3.6); opacity: 0; }
+}
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* El pulso es decorativo: si el visitante pide menos movimiento, se apaga.
+   El resaltado al pasar el mouse se mantiene, porque es información. */
+@media (prefers-reduced-motion: reduce) {
+  .where__ping { display: none; }
+}
+
+@media (max-width: 980px) {
+  .where__grid { grid-template-columns: 1fr; gap: 38px; }
+  .where__label { font-size: 0.55rem; padding: 4px 6px; letter-spacing: 0.12em; }
+}
+@media (max-width: 480px) {
+  .where__label { font-size: 0.48rem; padding: 3px 5px; letter-spacing: 0.08em; }
+}
+
 @media (max-width: 980px) {
   .split, .purpose__grid, .contact__grid { grid-template-columns: 1fr; gap: 50px; }
   .split--reverse .split__media { order: 0; }

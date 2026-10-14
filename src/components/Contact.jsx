@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useLang } from '../context/LanguageContext.jsx'
 import { content } from '../data/content.js'
-import { Mail, Phone, LinkedIn } from './icons.jsx'
+import { Mail, Phone, LinkedIn, Instagram } from './icons.jsx'
 
 export default function Contact() {
   const { t } = useLang()
@@ -53,6 +53,13 @@ export default function Contact() {
               <span>
                 <small>{t(c.linkedinLabel)}</small>
                 LinkedIn
+              </span>
+            </a>
+            <a className="contact__method" href={c.instagram} target="_blank" rel="noreferrer">
+              <span className="ico"><Instagram /></span>
+              <span>
+                <small>{t(c.instagramLabel)}</small>
+                Instagram
               </span>
             </a>
           </div>

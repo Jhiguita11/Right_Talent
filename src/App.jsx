@@ -11,6 +11,7 @@ import BrandBanner from './components/BrandBanner.jsx'
 import Services from './components/Services.jsx'
 import Value from './components/Value.jsx'
 import Philosophy from './components/Philosophy.jsx'
+import WhereWeAre from './components/WhereWeAre.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
 
@@ -33,6 +34,7 @@ export default function App() {
         <Services />
         <Value />
         <Philosophy />
+        <WhereWeAre />
         <Contact />
       </main>
       <Footer />
